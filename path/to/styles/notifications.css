@@ -17,3 +17,7 @@
 #mark-as-read, #delete-selected {
     /* Add your preferred styles */
 }
+
+.unread {
+    /* Add your preferred styles for unread notifications */
+}

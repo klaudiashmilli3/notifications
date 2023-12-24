@@ -22,6 +22,7 @@
         </select>
         <div id="notifications-display"></div>
     </div>
+    <a href="/path/to/send-notification.html">Send Notification</a>
     <script src="/path/to/scripts/notifications.js"></script>
     <script>
         let notifications = []; // This should be replaced with actual data fetching
@@ -71,6 +72,9 @@
                 checkbox.id = notification.id;
                 notificationElement.appendChild(checkbox);
                 notificationElement.textContent = notification.message;
+                if (!notification.read) {
+                    notificationElement.classList.add('unread');
+                }
                 notificationsDisplay.appendChild(notificationElement);
             });
         }

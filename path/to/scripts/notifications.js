@@ -31,7 +31,7 @@ function displayNotifications() {
     let filteredNotifications = notifications;
     
     if (type) {
-        filteredNotifications = filteredNotifications.filter(n => n.type === type);
+        filteredNotifications = filteredNotifications.filter(notification => notification.type === type);
     }
     
     if (dateOrder === 'desc') {
@@ -50,6 +50,9 @@ function displayNotifications() {
         checkbox.id = notification.id;
         notificationElement.appendChild(checkbox);
         notificationElement.textContent = notification.message;
+        if (!notification.read) {
+            notificationElement.classList.add('unread');
+        }
         notificationsDisplay.appendChild(notificationElement);
     });
 }

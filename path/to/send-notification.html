@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/path/to/styles/send-notification.css">
+</head>
+<body>
+    <form id="send-notification-form">
+        <label for="notification-type">Type:</label>
+        <select id="notification-type">
+            <option value="event">Event</option>
+            <option value="warning">Warning</option>
+            <option value="payments">Payments</option>
+            <option value="package">Package / Guest Arrived</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="notification-message">Message:</label>
+        <textarea id="notification-message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <a href="/path/to/notifications.html">Go to Notifications</a>
+    <script src="/path/to/scripts/send-notification.js"></script>
+</body>
+</html>
